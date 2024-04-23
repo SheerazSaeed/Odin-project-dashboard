@@ -74,19 +74,58 @@ input {
     width: 150px;
 }
 
-.main-contents{
+.main {
     background-color: aqua;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(10, 1fr);   
-    gap: 5px;
+    gap: 15px;
     padding: 10px;
 }
 
-.main-content-project1 {
+[class^="main-project"], .main-announcement-container, .main-trendingbox {
     display: grid;
-    grid-column: 1 / 3;
-    grid-row: 2 / 4 ;
     background-color: white;
-    
+}
+
+.main-project1, .main-project3, .main-project5 {
+    grid-column: 1 / 4;
+}
+
+.main-project2, .main-project4, .main-project6 {
+    grid-column: 4 / 7;
+}
+
+.main-project1, .main-project2 {
+    grid-row: 2 / 5;
+}
+
+.main-project3, .main-project4 {
+    grid-row: 5 / 8;
+}
+
+.main-project5, .main-project6 {
+    grid-row: 8 / 11;
+}
+
+.main-announcement-container {
+    grid-column: 7 / 10;
+    grid-row: 2 / 6;
+}
+
+.main-trendingbox {
+    grid-column: 7 / 10;
+    grid-row: 7 / 11;
+}
+
+.main-announcement {
+    display: grid;
+    grid-column: 7 / 10;
+    grid-row: 1 ;
+}
+
+.main-trending {
+    display: grid;
+    grid-column: 7 / 10;
+    grid-row: 6;
 }
