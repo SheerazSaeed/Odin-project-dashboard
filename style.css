@@ -18,48 +18,80 @@ body, html {
    
 
 .sidebar{
-    background-color: blue;
+    background-color: #243c5a;
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: 1fr 4fr 5fr;
     grid-row: 1 / 6;
+    color: #f8fafc;
+    font-weight: bold;
+    font-family: sans-serif;
+    line-height: 2;
 }
 
 .dashboard-icon {
-    display: grid;
-    grid-row: 1/2;
+    display: flex;
+    font-size: 20px;
+
+}
+.dashboard-image {
+    display: flex;
+    justify-content: flex-start;
+    height: 40px;
+    width: 40px;  
 }
 
 .menu1 li, .menu ul {
     display: grid;
-    grid-row: 2/6;
+    grid-row: 2/3;
 }
 
 .menu2 li {
     display: grid;
-    grid-row: 3/4;
+    grid-row: 4/5;
 }
 
 .header {
-    background-color: gray;
+    background-color: #f8fafc;
     display: grid;
     grid-row: 1;
     grid-template-rows: repeat(2, 1fr);  
 }
 
 .header1  {
-    padding-top: 15px;
+   padding-top: 15px;
    grid-row: 1;
    display: flex;
    justify-content: space-around;
    align-items: center;
 }
 .topnav {
-    width: 500px;
+    display: flex;
+    justify-content: center;
 }
+
 input {
-    width: 400px;
-    height: 20px;
-    border-radius: 16px;
+    width: 600px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: #cbd5e1;
+    border: none;
+}
+
+.search-image {
+    width: 35px;
+    background-color:#f8fafc;
+    border: none;  
+}
+.logo, .logo2 {
+    height: 50px;
+    width: 50px;
+    display: flex;
+}
+
+
+.personal-name {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .header2 {
@@ -74,8 +106,13 @@ input {
     width: 150px;
 }
 
+.notification-icon {
+    height: 20px;
+    width: 20px;
+}
+
 .main {
-    background-color: aqua;
+    background-color: #cbd5e1;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(10, 1fr);   
@@ -88,12 +125,16 @@ input {
     background-color: white;
 }
 
+[class^="main-project"]{
+    box-shadow: 3px 3px red, -1em 0 .4em olive;
+}
+
 .main-project1, .main-project3, .main-project5 {
     grid-column: 1 / 4;
 }
 
 .main-project2, .main-project4, .main-project6 {
-    grid-column: 4 / 7;
+    grid-column: 4 / 7; 
 }
 
 .main-project1, .main-project2 {
