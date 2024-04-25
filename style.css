@@ -14,9 +14,9 @@ body, html {
     gap: 4px;
     resize: both;
     overflow: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
    
-
 .sidebar{
     background-color: #243c5a;
     display: grid;
@@ -24,7 +24,6 @@ body, html {
     grid-row: 1 / 6;
     color: #f8fafc;
     font-weight: bold;
-    font-family: sans-serif;
     line-height: 2;
 }
 
@@ -38,6 +37,11 @@ body, html {
     justify-content: flex-start;
     height: 40px;
     width: 40px;  
+}
+
+.icon-logo-name {
+    display: flex;
+    align-items: center;
 }
 
 .menu1 li, .menu ul {
@@ -58,23 +62,37 @@ body, html {
 }
 
 .header1  {
-   padding-top: 15px;
+   padding-top: 10px;
    grid-row: 1;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: center;
+   margin-right: 50px ;
 }
 .topnav {
     display: flex;
     justify-content: center;
+    padding-left: 10px;
 }
 
 input {
-    width: 600px;
+    width: 500px;
     height: 25px;
     border-radius: 10px;
     background-color: #cbd5e1;
     border: none;
+}
+
+.line1, .line2 {
+    line-height: 0.25;
+    font-weight: bold;
+}
+
+.line1 {
+    font-size: small;  
+}
+.line2 {
+    font-size: large;
 }
 
 .search-image {
@@ -83,27 +101,48 @@ input {
     border: none;  
 }
 .logo, .logo2 {
-    height: 50px;
-    width: 50px;
-    display: flex;
+    display: flex;   
 }
 
+.logo { 
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+}
+
+.logo2 {
+    height: 65px;
+    width: 65px;
+    margin-bottom: 10px;
+}
+
+.new-upload-share, .header2-logo {
+    display: flex;
+    align-items: center;
+}
+
+.button1, .button2, .button3 {
+    background-color: #243c5a;
+    color: #f8fafc;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    border-radius: 16px;
+    margin: 10px;
+}
 
 .personal-name {
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .header2 {
     grid-row: 2;
     display: flex;
-    justify-content:space-between;
-    align-items: center;
+    justify-content: space-between;       
 }
+
 .header2-logo {
-    display: flex;
-    justify-content: space-around;
-    width: 150px;
+    padding-left: 20px;
 }
 
 .notification-icon {
