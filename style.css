@@ -5,12 +5,11 @@ body, html {
     width: 100%;
   }
 
-
   .container {
     display: grid;
-    grid-template-columns: 1fr 5fr; /* 1 fraction for the sidebar, 5 fractions for the main content */
-    grid-template-rows: 20% 80%; /* 20% of the container's height for the header, 80% for the main content */
-    height: 100%; /* Container height to fill the viewport */
+    grid-template-columns: 1fr 5fr; 
+    grid-template-rows: 20% 80%; 
+    height: 100%;
     gap: 4px;
     resize: both;
     overflow: auto;
@@ -43,6 +42,7 @@ body, html {
     display: flex;
     align-items: center;
 }
+
 
 .menu1 li, .menu ul {
     display: grid;
@@ -153,11 +153,26 @@ input {
 .main {
     background-color: #cbd5e1;
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(10, 1fr);   
+    grid-template-columns: minmax(repeat(9, 1fr));
+    grid-template-rows: minmax(repeat(10, 1fr));   
     gap: 15px;
     padding: 10px;
+    
 }
+
+div[class^="main-project"] button {
+    background-color:#cbd5e1; 
+    color: #243c5a;             
+    padding: 10px 20px;                
+    border-radius: 5px;        
+    cursor: pointer; 
+    width: 200px;         
+    font-weight: bold;
+}
+
+div[class^="main-button*"] button  {
+    display: flex; 
+    justify-content:space-around;}
 
 [class^="main-project"], .main-announcement-container, .main-trendingbox {
     display: grid;
