@@ -208,7 +208,7 @@ div[class^="main-button*"] button  {
 }
 
 [class^="main-project"]{
-    box-shadow: 3px 3px red, -1em 0 .4em olive;
+    box-shadow: 3px 3px #243c5a, -1em 0 .4em olive;
 }
 
 .main-project1, .main-project3, .main-project5 {
