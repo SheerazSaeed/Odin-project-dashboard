@@ -26,6 +26,32 @@ body, html {
     line-height: 2;
 }
 
+.sidebar button {
+    background-color: #243c5a;
+    color: #f8fafc;
+    font-weight: bold;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 16px;
+    padding: 0 10px; 
+    display: flex; 
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+
+.sidebar li img {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    padding-right: 10px;
+    
+}
+
+button {
+    cursor: pointer;
+}
+
 .dashboard-icon {
     display: flex;
     font-size: 20px;
@@ -172,7 +198,9 @@ div[class^="main-project"] button {
 
 div[class^="main-button*"] button  {
     display: flex; 
-    justify-content:space-around;}
+    justify-content:space-around;
+}
+
 
 [class^="main-project"], .main-announcement-container, .main-trendingbox {
     display: grid;
