@@ -13,7 +13,7 @@ body, html {
     gap: 4px;
     resize: both;
     overflow: auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;   
 }
    
 .sidebar{
@@ -24,6 +24,7 @@ body, html {
     color: #f8fafc;
     font-weight: bold;
     line-height: 2;
+    padding-right: 30px;
 }
 
 .sidebar button {
@@ -44,8 +45,7 @@ body, html {
     width: 25px;
     height: 25px;
     vertical-align: middle;
-    padding-right: 10px;
-    
+    padding-right: 10px;    
 }
 
 button {
@@ -55,8 +55,8 @@ button {
 .dashboard-icon {
     display: flex;
     font-size: 20px;
-
 }
+
 .dashboard-image {
     display: flex;
     justify-content: flex-start;
@@ -68,7 +68,9 @@ button {
     display: flex;
     align-items: center;
 }
-
+.menu1 button, .menu2 button {
+    margin: 5px;
+}
 
 .menu1 li, .menu ul {
     display: grid;
@@ -176,19 +178,20 @@ input {
     width: 20px;
 }
 
-.main {
+.main {     
     background-color: #cbd5e1;
     display: grid;
-    grid-template-columns: minmax(repeat(9, 1fr));
-    grid-template-rows: minmax(repeat(10, 1fr));   
-    gap: 15px;
-    padding: 10px;
-    
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    grid-template-rows: repeat(10, minmax(0, 1fr));   
+    gap: 40px;
+    padding: 10px;   
+    height: fit-content;
 }
 
 div[class^="main-project"] button {
-    background-color:#cbd5e1; 
-    color: #243c5a;             
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    color: #f8fafc;           
     padding: 10px 20px;                
     border-radius: 5px;        
     cursor: pointer; 
@@ -198,25 +201,62 @@ div[class^="main-project"] button {
 
 div[class^="main-button*"] button  {
     display: flex; 
-    justify-content:space-around;
+    justify-content:space-around;    
 }
-
 
 [class^="main-project"], .main-announcement-container, .main-trendingbox {
     display: grid;
-    background-color: white;
+    background-color:#243c5a;
+    padding: 20px;
+    line-height: 1.5;
 }
 
-[class^="main-project"]{
-    box-shadow: 3px 3px #243c5a, -1em 0 .4em olive;
+[class^="main-project"] {
+    background-position: center;
+    color: #f8fafc;
+    background-size: cover;
+    font-weight:800;
+}
+
+.main-project1 {
+    background-image: url('images/main-images/amazon-background.jpeg');
+}
+
+.main-project2 {
+    background-image: url('./images/main-images/pho-background.jpg');
+}
+
+.main-project3 {
+    background-image: url('./images/main-images/signupform.jpg');
+    color: #243c5a;
+}
+
+.main-project4 {
+    background-image: url('./images/main-images/library.jpg');
+}
+
+[class^="main-project"], .main-announcement-container, .main-trendingbox {
+    box-shadow:
+    0px 1.6px 2.7px rgba(0, 0, 0, 0.236),
+    0px 4.1px 6.9px rgba(0, 0, 0, 0.337),
+    0px 8.3px 14.2px rgba(0, 0, 0, 0.423),
+    0px 17.2px 29.2px rgba(0, 0, 0, 0.524),
+    0px 47px 80px rgba(0, 0, 0, 0.76)
+  ;
+}
+
+.main-title {
+    grid-column: 1 / 4 ;
+    grid-row: 1 ;
+    display: grid;
 }
 
 .main-project1, .main-project3, .main-project5 {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
 }
 
 .main-project2, .main-project4, .main-project6 {
-    grid-column: 4 / 7; 
+    grid-column: 5 / 9; 
 }
 
 .main-project1, .main-project2 {
@@ -232,23 +272,26 @@ div[class^="main-button*"] button  {
 }
 
 .main-announcement-container {
-    grid-column: 7 / 10;
+    grid-column: 9 / 11;
     grid-row: 2 / 6;
+    color: #f8fafc;
 }
 
 .main-trendingbox {
-    grid-column: 7 / 10;
+    grid-column: 9 / 11;
     grid-row: 7 / 11;
+    color: #f8fafc;
+}
+
+.main-announcement, .main-trending {
+    display: grid;
+    grid-column: 9 / 10;  
 }
 
 .main-announcement {
-    display: grid;
-    grid-column: 7 / 10;
     grid-row: 1 ;
 }
 
 .main-trending {
-    display: grid;
-    grid-column: 7 / 10;
     grid-row: 6;
 }
